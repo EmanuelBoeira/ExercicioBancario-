@@ -11,7 +11,11 @@ namespace AplicativoBancario.Model
         public int Id { get; set; } 
         public string Nome { get; set; }
         public string Cpf { get; set; }
-        
+
+        public Cliente()
+        {
+
+        }
         public Cliente(string nome, string cpf)
         {
             this.Nome = nome;

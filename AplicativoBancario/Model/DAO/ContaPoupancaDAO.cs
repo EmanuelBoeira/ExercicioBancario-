@@ -26,7 +26,7 @@ namespace AplicativoBancario.Model.DAO
             }
             catch (SqlException e)
             {
-
+                Console.WriteLine(e);
             }
             finally
             {
@@ -36,7 +36,12 @@ namespace AplicativoBancario.Model.DAO
 
         public Conta ConcultarPorId(int id)
         {
-            throw new NotImplementedException();
+            comandoSql.CommandText = "SELECT * FROM contascorrentes WHERE id = @id";
+            comandoSql.Parameters.AddWithValue("@id", id);
+
+            ContaPoupanca conta = new ContaPoupanca();
+
+            return conta;
         }
 
         public List<Conta> ConsultarTodos()
@@ -49,7 +54,7 @@ namespace AplicativoBancario.Model.DAO
             throw new NotImplementedException();
         }
 
-        public Conta Editar(Conta obj)
+        public void Editar(Conta obj)
         {
             throw new NotImplementedException();
         }

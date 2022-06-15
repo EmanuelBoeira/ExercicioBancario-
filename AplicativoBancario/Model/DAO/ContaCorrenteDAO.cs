@@ -26,7 +26,7 @@ namespace AplicativoBancario.Model.DAO
             }
             catch (SqlException e)
             {
-
+                Console.WriteLine(e);
             }
             finally
             {
@@ -49,7 +49,7 @@ namespace AplicativoBancario.Model.DAO
             throw new NotImplementedException();
         }
 
-        public Conta Editar(Conta conta)
+        public void Editar(Conta conta)
         {
             throw new NotImplementedException();
         }

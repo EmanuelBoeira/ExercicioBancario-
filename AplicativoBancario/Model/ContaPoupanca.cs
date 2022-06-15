@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace AplicativoBancario.Model
 {
-    internal class ContaPoupanca
+    internal class ContaPoupanca : Conta
     {
+        public ContaPoupanca(int agencia, int numero, Cliente cliente) : base(agencia, numero, cliente)
+        {
+            this.Agencia = agencia;
+            this.Numero = numero;
+            this.Cliente = cliente;
+        }
+
+        public ContaPoupanca()
+        {
+           
+        }
     }
 }

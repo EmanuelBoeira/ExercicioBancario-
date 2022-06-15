@@ -8,6 +8,6 @@ namespace AplicativoBancario.Model.DAO
         public void Deletar(int id);
         public T ConcultarPorId(int id);
         public List<T> ConsultarTodos();
-        public T Editar(T obj);
+        public void Editar(T obj);
     }
 }
